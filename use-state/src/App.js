@@ -7,20 +7,20 @@ function BoxSpinner(){
 
   return(
   <div className="heroPage">
-      <Box rotate={rotate} />
+      <Box rotate={rotate} />                        
       <Spinner rotation={setRotate} />
   </div>
-  );
+  );                                                 //Porps go weeeeeeeeeeeeee
 }
 
-function Box({ rotate }){
+function Box({ rotate }){                            //Dont forget the proppppp man i hate props
   const myStyle = {
-    transform : `rotate(${rotate}deg)`
-  }
+    transform : `rotate(${rotate}deg)`               //Add string for valuesss onlyyyyyyyyyyyyyyyyy
+  };
   return <div className="box" style={myStyle}></div>;
 }
 
-function Spinner({ rotation }){
+function Spinner({ rotation }){                      // params/props need destructurizing every fucking timee broooooooooo
   return(
   
   <form>
@@ -29,7 +29,7 @@ function Spinner({ rotation }){
         className="slider"
         min="0"
         max="360"
-        onChange={(e) => rotation(e.target.value)}
+        onChange={(e) => rotation(e.target.value)}  //Dont forget the fucking equal to
       />
 
   </form>
