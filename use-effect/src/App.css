@@ -4,13 +4,14 @@
 
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
 
 }
 
-.boxArr{
+.boxArr,
+.newBoxArr{
   display: flex;
   width: 100%;
-  height: var(--boxHt);
 
   flex-direction: row;
   justify-content: space-around;
@@ -20,17 +21,50 @@
 }
 
 .box{
-  border: 1px solid #000;
   position: relative;
 
-  width: 10vw ;
-  height: 10vw;
+  width: clamp(120px,12vw,400px) ;
+  height: clamp(120px,12vw,400px);
+ 
+  transition: box-shadow 0.5s;
 }
 
-.box > p{
+.box > h1{
   position: absolute;
   left: 50%;
   top: 50%;
 
+  font-size:100%;
+
   transform:translate(-50%,-50%);
+}
+.newBox{
+  height: clamp(120px,12vw,400px);
+  width: clamp(120px,12vw,400px);
+
+
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: black;
+}
+
+.slider{
+  transition:all 0.5s;
+  width: 90%;
+}
+
+@media screen and (max-width: 1024px) {
+  .heroPage{
+    flex-direction: row;
+  }
+  .boxArr{
+    flex-direction: column;
+  }
+
+
+  .newBoxArr{
+    flex-direction: column;
+  }
+
 }
